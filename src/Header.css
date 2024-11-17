@@ -1,0 +1,41 @@
+/* Header styling */
+.header {
+    /*background-color: white; !* White background for header *!*/
+    padding: 16px 32px;
+    border-bottom: 1px solid #ddd; /* Thin dividing line */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Navigation menu */
+.nav {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
+}
+
+/* Navigation list */
+.nav-list {
+    display: flex;
+    gap: 32px; /* Spacing between tabs */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation item */
+.nav-item {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Navigation link */
+.nav-link {
+    text-decoration: none;
+    color: #007bff; /* Blue link color */
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+}

@@ -1,0 +1,112 @@
+.doctor-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.doctor-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 500px;
+  text-align: center;
+}
+
+.doctor-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.tab.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.tab:hover {
+  background-color: #ddd;
+}
+
+.doctor-info,
+.tab-content {
+  margin-top: 20px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-form textarea {
+  resize: none;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.user-rating {
+  display: flex;
+  justify-content: center;
+}
+
+.user-rating .star {
+  cursor: pointer;
+}
+
+.doctor-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.doctor-position,
+.doctor-hospital,
+.doctor-address,
+.doctor-phone {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.rating {
+  margin-top: 10px;
+}
+
+.star {
+  color: #ccc;
+  font-size: 24px;
+}
+
+.star.filled {
+  color: gold;
+}
+
+.submitted-comments .comment-item {
+  margin-top: 20px;
+}
+
+.submitted-comments .comment-item .user-rating {
+  justify-content: flex-start;
+}
