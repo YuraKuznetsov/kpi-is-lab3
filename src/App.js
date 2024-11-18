@@ -13,9 +13,9 @@ function App() {
             <Router>
                 <Header />
                 <Routes>
-                    <Route path="/" element={<div>Home Page</div>} />
-                    <Route path="/doctors" element={<SearchDoctorPage />} />
                     <Route path="/doctor/:id" element={<DoctorPage />} />
+                    <Route path="/doctors" element={<SearchDoctorPage />} />
+                    <Route path="/*" element={<div>Not Implemented yet</div>} />
                 </Routes>
             </Router>
         </div>
