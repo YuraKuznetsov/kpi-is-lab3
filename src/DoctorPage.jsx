@@ -2,11 +2,13 @@ import React, {useState} from "react";
 import "./DoctorPage.css"; // Import the CSS file
 
 import {doctorsList} from "./mockDB";
+import {useParams} from "react-router-dom";
 
-const DoctorPage = ({docto1r}) => {
-    const doctor = doctorsList[1];
+const DoctorPage = () => {
+    const { id } = useParams();
+    const doctor = doctorsList.filter((doctor) => doctor.id === parseInt(id))[0];
 
-    const [activeTab, setActiveTab] = useState("info");
+    const [activeTab, setActiveTab] = useState("review");
     const [comment, setComment] = useState("");
     const [rating, setRating] = useState(0);
     const [commentsList, setCommentsList] = useState(doctor.reviews);
@@ -60,8 +62,8 @@ const DoctorPage = ({docto1r}) => {
                 </div>
 
                 <div className="tabs">
-                    <button className={activeTab === "info" ? "tab active" : "tab"} onClick={() => setActiveTab("info")}> Запис на прийом </button>
-                    <button className={activeTab === "appointments" ? "tab active" : "tab"} onClick={() => setActiveTab("appointments")}> Залишити відгук </button>
+                    <button className={activeTab === "appointment" ? "tab active" : "tab"} onClick={() => setActiveTab("appointment")}> Запис на прийом </button>
+                    <button className={activeTab === "review" ? "tab active" : "tab"} onClick={() => setActiveTab("review")}> Залишити відгук </button>
                 </div>
 
                 <div className="tab-content">
@@ -92,7 +94,7 @@ const DoctorPage = ({docto1r}) => {
                             </div>
                         </div>
 
-                        <button type="submit" className="submit-button">Submit</button>
+                        <button type="submit" className="submit-button">Опублікувати</button>
                     </form>
 
                     <div className="comments-section">
@@ -118,7 +120,7 @@ const DoctorPage = ({docto1r}) => {
                                 ))}
                             </ul>
                         ) : (
-                            <p>No comments submitted yet.</p>
+                            <p>Відгуки відсутні</p>
                         )}
                     </div>
 
