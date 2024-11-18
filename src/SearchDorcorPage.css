@@ -67,10 +67,6 @@ h1 {
     transition: box-shadow 0.3s;
 }
 
-.doctor-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 /* Doctor Info */
 .doctor-info {
     flex: 1;
@@ -81,6 +77,15 @@ h1 {
     margin: 0;
     font-size: 18px;
     font-weight: bold;
+}
+
+.doctor-name.link {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.doctor-name.link:hover {
+    color: #0056b3;
 }
 
 /* Doctor Specialization */
