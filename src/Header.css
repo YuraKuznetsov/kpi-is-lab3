@@ -8,7 +8,7 @@
 
 /* Navigation menu */
 .nav {
-    width: 800px;
+    width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: start;
@@ -32,7 +32,7 @@
 /* Navigation link */
 .nav-link {
     text-decoration: none;
-    color: #007bff; /* Blue link color */
+    color: black;
     transition: color 0.3s;
 }
 
