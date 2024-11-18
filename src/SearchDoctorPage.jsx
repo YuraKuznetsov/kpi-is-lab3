@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./SearchDorcorPage.css";
 import {doctorsList} from "./mockDB";
+import {useNavigate} from "react-router-dom";
 
 const SearchDoctorPage = () => {
+    const navigate = useNavigate();
     const [doctors] = useState(doctorsList);
 
     const [searchQuery, setSearchQuery] = useState("");
@@ -53,7 +55,7 @@ const SearchDoctorPage = () => {
                                 <div className="rating">{renderRatingStars(doctor.rating)}</div>
                             </div>
                             <div className="doctor-card-right">
-                                <h1 className="doctor-name">{doctor.fullName}</h1>
+                                <p onClick={() => navigate("/doctor/" + doctor.id)} className="doctor-name link">{doctor.fullName}</p>
                                 <p className="doctor-position">{doctor.position}</p>
                                 <p className="doctor-hospital">{doctor.hospital}</p>
                                 <p className="doctor-address">{doctor.address}</p>
